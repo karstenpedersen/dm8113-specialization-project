@@ -1,0 +1,55 @@
+OUT_DIR := ".out"
+REPORT_PATH := "report/main.typ"
+REPORT_OUT_PATH := OUT_DIR / "report.pdf"
+PRESENTATION_PATH := "presentation/main.typ"
+PRESENTATION_OUT_PATH := OUT_DIR / "presentation.pdf"
+SUPERVISOR_CONTRACT_PATH := "admin/supervisor_contract.typ"
+SUPERVISOR_CONTRACT_OUT_PATH := OUT_DIR / "supervisor_contract.pdf"
+PROJECT_DESCRIPTION_PATH := "admin/project_description.typ"
+PROJECT_DESCRIPTION_OUT_PATH := OUT_DIR / "project_description.pdf"
+PDF_VIEWER := "zathura"
+TYPST_WATCH_CMD := "typst watch --root ."
+
+# Show recipes
+default:
+    @just --list
+
+# Creates output directory
+setup:
+    @mkdir -p {{ OUT_DIR }}
+
+# Watches report
+watch--report: setup
+    @ {{ TYPST_WATCH_CMD }} {{ REPORT_PATH }} {{ REPORT_OUT_PATH }}
+
+# View report
+view--report:
+    @ {{ PDF_VIEWER }} {{ REPORT_OUT_PATH }} &
+
+# Watches project description
+watch--project-description: setup
+    @ {{ TYPST_WATCH_CMD }} {{ PROJECT_DESCRIPTION_PATH }} {{ PROJECT_DESCRIPTION_OUT_PATH }}
+
+# View project description
+view--project-description:
+    @ {{ PDF_VIEWER }}  {{ PROJECT_DESCRIPTION_OUT_PATH }} &
+
+# Watches supervisor contract
+watch--supervisor-contract: setup
+    @ {{ TYPST_WATCH_CMD }} {{ SUPERVISOR_CONTRACT_PATH }} {{ SUPERVISOR_CONTRACT_OUT_PATH }}
+
+# View supervisor contract
+view--supervisor-contract: setup
+    @ {{ PDF_VIEWER }} {{ SUPERVISOR_CONTRACT_OUT_PATH }} &
+
+# Watches presentation
+watch--presentation: setup
+    @ {{ TYPST_WATCH_CMD }} {{ PRESENTATION_PATH }} {{ PRESENTATION_OUT_PATH }}
+
+# View presentation
+view--presentation:
+    @ {{ PDF_VIEWER }} {{ PRESENTATION_OUT_PATH }} &
+
+# Removes output directory
+clean:
+    @rm -rfv {{ OUT_DIR }}

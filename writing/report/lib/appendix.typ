@@ -1,0 +1,3 @@
+#let appendix(body) = {
+  body
+}
