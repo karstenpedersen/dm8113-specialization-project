@@ -1,5 +1,5 @@
 
-#let title = ""
+#let title = "Infrastructure-as-Code Security:\nVulnerabilities and Defenses"
 #let subtitle = "DM8113: Specialization Project"
 #let authors = (
   (

@@ -5,8 +5,6 @@
 
 #import "../shared/lib/todo.typ": TODO
 
-#set document(title: title)
-
 #show: project_description.with(
   title: title,
   subtitle: subtitle,
