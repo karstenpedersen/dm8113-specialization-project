@@ -1,5 +1,7 @@
 #import "../metadata.typ": *
-#import "../admin/lib/project_description_template.typ": project_description
+#import "../project_description/lib/project_description_template.typ": (
+  project_description,
+)
 
 #import "../shared/lib/todo.typ": TODO
 
