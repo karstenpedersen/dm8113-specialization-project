@@ -1,17 +1,15 @@
 #import "@preview/polylux:0.4.0": *
 
 #let titlepage(title: "", subtitle: "", authors: (), advisors: ()) = {
-  set page(
-    footer: {
-      let count = authors.len()
-      stack(
-        ..authors.map(author => [
-          #author.name
-          #link("mailto:" + author.email)
-        ]),
-      )
-    },
-  )
+  set page(footer: {
+    let count = authors.len()
+    stack(
+      ..authors.map(author => [
+        #author.name
+        #link("mailto:" + author.email)
+      ]),
+    )
+  })
 
   slide[
     #set align(horizon)

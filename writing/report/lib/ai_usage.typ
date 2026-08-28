@@ -11,13 +11,18 @@
   set text(
     font: body-font,
     size: 12pt,
-    lang: "en"
+    lang: "en",
   )
 
   set par(leading: 1em)
 
   // --- AI Usage ---
-  align(left, text(font: sans-font, 20pt, weight: 700,"Transparency in the use of AI tools"))
+  align(left, text(
+    font: sans-font,
+    20pt,
+    weight: 700,
+    "Transparency in the use of AI tools",
+  ))
   v(12pt)
 
   body

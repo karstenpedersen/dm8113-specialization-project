@@ -2,7 +2,7 @@
 
 #let end-slide() = {
   set page(
-    fill: black
+    fill: black,
   )
 
   slide[]

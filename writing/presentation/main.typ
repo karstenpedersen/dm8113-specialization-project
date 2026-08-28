@@ -9,7 +9,7 @@
 #show: presentation.with(
   title: title,
   authors: authors,
-  advisors: advisors
+  advisors: advisors,
 )
 
 

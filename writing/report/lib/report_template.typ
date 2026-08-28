@@ -1,4 +1,6 @@
-#import "@preview/glossarium:0.5.10": make-glossary, register-glossary, print-glossary, gls, glspl
+#import "@preview/glossarium:0.5.10": (
+  gls, glspl, make-glossary, print-glossary, register-glossary,
+)
 
 #import "./titlepage.typ": titlepage
 #import "./abstract.typ": abstract
@@ -19,12 +21,12 @@
   appendix: "",
   body-font: "New Computer Modern",
   sans-font: "New Computer Modern Sans",
-  body
+  body,
 ) = {
   titlepage(
     title: title,
     authors: authors,
-    advisors: advisors
+    advisors: advisors,
   )
 
   pagebreak()
@@ -39,8 +41,7 @@
       columns: (1fr, 1fr),
       align: (left, right),
       gutter: 6pt,
-      context counter(page).display("i"),
-      title
+      context counter(page).display("i"), title,
     ),
   )
   abstract(lang: "en")[#abstract_en]
@@ -64,7 +65,7 @@
       v(15mm)
     },
     depth: 2,
-    indent: 2em
+    indent: 2em,
   )
 
   v(2.4fr)
@@ -87,8 +88,7 @@
       columns: (1fr, 1fr),
       align: (left, right),
       gutter: 6pt,
-      context counter(page).display("1"),
-      title
+      context counter(page).display("1"), title,
     ),
   )
 

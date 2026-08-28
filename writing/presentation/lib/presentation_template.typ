@@ -9,7 +9,7 @@
   advisors: (),
   body-font: "New Computer Modern",
   sans-font: "New Computer Modern Sans",
-  body
+  body,
 ) = {
   set page(paper: "presentation-16-9")
   set text(size: 20pt, font: sans-font)
@@ -17,7 +17,7 @@
   titlepage(
     title: title,
     authors: authors,
-    advisors: advisors
+    advisors: advisors,
   )
   pagebreak()
 
@@ -29,7 +29,7 @@
           it.element.location(),
           it.indented(sym.bullet, it.body()),
         )
-      ]
+      ],
     )
   }
 
@@ -40,7 +40,7 @@
       #v(1fr)
     ][
       #v(1fr)
-      #outline(depth: 1, title: none, )
+      #outline(depth: 1, title: none)
       #v(1fr)
     ]
   ]

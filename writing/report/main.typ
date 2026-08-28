@@ -1,4 +1,6 @@
-#import "@preview/glossarium:0.5.10": make-glossary, register-glossary, print-glossary, gls, glspl
+#import "@preview/glossarium:0.5.10": (
+  gls, glspl, make-glossary, print-glossary, register-glossary,
+)
 
 #import "../metadata.typ": *
 #import "./lib/report_template.typ": report
